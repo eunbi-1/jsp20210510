@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+	1부터 10까지의 합은
+	<%=1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10%>
 </body>
 </html>

@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+<p>request parameter</p>
+<%= request.getParameter("name") %> <br>
+<%= request.getParameter("age") %>
 </body>
 </html>
+
+
+
+
+
+
+

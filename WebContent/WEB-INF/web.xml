@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>jsp-web</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <listener>
+  	<listener-class>ch20.AppListener01</listener-class>
+  </listener>
+  
+  <listener>
+  	<listener-class>sample1.BoardAppListener</listener-class>
+  </listener>
+  
+  <context-param>
+  	<param-name>jdbcdriver</param-name>
+  	<param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>jdbcUrl</param-name>
+  	<param-value>jdbc:mysql://localhost:3306/guestbook</param-value>
+  </context-param>
+  
+  <session-config>
+  	<session-timeout>30</session-timeout>
+  </session-config>
+  
+  <servlet>
+  	<servlet-name>
+  		servlet3
+  	</servlet-name>
+  	<servlet-class>
+  		ch17.lecture.Servlet03
+  	</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>
+  		servlet3
+  	</servlet-name>
+  	<url-pattern>
+  		/servlet3
+  	</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>now</servlet-name>
+  	<servlet-class>ch17.textbook.NowServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>now</servlet-name>
+  	<url-pattern>/now</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>servlet12</servlet-name>
+  	<servlet-class>ch17.lecture.Servlet12InitParam</servlet-class>
+  	<init-param>
+  		<param-name>
+  			url
+  		</param-name>
+  		<param-value>
+  			jdbc.mysql
+  		</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>
+  			password
+  		</param-name>
+  		<param-value>
+  			wnddkdwjdqh
+  		</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet12</servlet-name>
+  	<url-pattern>/servlet12</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>
+  		servlet13
+  	</servlet-name>
+	<servlet-class>
+		ch17.lecture.Servlet13InitParam
+	</servlet-class>  
+	<init-param>
+		<param-name>
+			name
+		</param-name>
+		<param-value>
+			trump
+		</param-value>
+	</init-param>
+	<init-param>
+		<param-name>
+			home
+		</param-name>
+		<param-value>
+			korea
+		</param-value>
+	</init-param>	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>
+  		servlet13
+  	</servlet-name>
+  	<url-pattern>
+  		/servlet13
+  	</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+  	<servlet-name>
+  		servlet15
+  	</servlet-name>
+  	<servlet-class>
+  		ch17.lecture.Servlet15Startup
+  	</servlet-class>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>
+  		servlet15
+  	</servlet-name>
+  	<url-pattern>
+  		/servlet15
+  	</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DBCPInit2</servlet-name>
+  	<servlet-class>ch17.textbook.DBCPInit2</servlet-class>
+  	<init-param>
+  		<param-name>jdbcdriver</param-name>
+  		<param-value>com.mysql.jdbc.Driver</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>jdbcUrl</param-name>
+  		<param-value>
+  		jdbc:mysql://localhost:3306/chap14?characterEncoding=utf8
+  		</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>dbUser</param-name>
+  		<param-value>jspexam</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>dbPass</param-name>
+  		<param-value>jsppw</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>poolName</param-name>
+  		<param-value>chap14</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+
+
+  <filter>
+  	<filter-name>filter02</filter-name>
+  	<filter-class>ch19.lecture.Filter02</filter-class>
+  </filter>  
+  <filter-mapping>
+	<filter-name>filter02</filter-name>
+	<url-pattern>/filter02</url-pattern>  
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>filter0301</filter-name>
+  	<filter-class>ch19.lecture.Filter0301</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>filter0302</filter-name>
+  	<filter-class>ch19.lecture.Filter0302</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>filter0302</filter-name>
+  	<url-pattern>/filter03</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>filter0301</filter-name>
+  	<url-pattern>/filter03</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+  	<filter-name>charSetFilter</filter-name>
+  	<filter-class>sample2.filter.RequestCharSetFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>charSetFilter</filter-name>
+  	<url-pattern>/sample2/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>loginFilter</filter-name>
+  	<filter-class>sample2.filter.LoginFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>loginFilter</filter-name>
+  	<url-pattern>/sample2/board/write</url-pattern>
+  	<url-pattern>/sample2/member/info</url-pattern>
+  	<url-pattern>/sample2/member/list</url-pattern>
+  </filter-mapping>
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

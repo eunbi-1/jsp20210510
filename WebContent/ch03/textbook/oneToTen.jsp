@@ -7,6 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+<%
+int sum = 0;
+for (int i = 1; i <= 10; i++) {
+	sum = sum + i;
+}
+
+%>
+1부터 10까지의 합은 <%= sum %> 입니다.
 </body>
 </html>
+
+
+
+

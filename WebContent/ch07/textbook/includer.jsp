@@ -7,6 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+<%
+	int number = 10;
+%>
+
+<%@ include file="/ch07/textbook/includee.jspf" %>
+
+공통변수 DATAFOLDER="<%= dataFolder %>"
 </body>
 </html>
+
+
+
+
+

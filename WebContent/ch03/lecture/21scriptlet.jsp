@@ -7,6 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+<%
+for (int i = 0; i < 5; i++) {
+%>
+<%= i %> <br>
+<%--
+	out.print(i);
+	out.print("<br>");
+--%>
+<%
+}
+%>
 </body>
 </html>
+
+

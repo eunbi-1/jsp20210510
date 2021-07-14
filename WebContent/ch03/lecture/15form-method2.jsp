@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+	아이디 : <%= request.getParameter("id") %> <br>
+	암호 : <%= request.getParameter("pw") %> <br>
 </body>
 </html>

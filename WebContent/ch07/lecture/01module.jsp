@@ -3,10 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
+
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 첫번째 jsp - sebaek2 </h1>
+<div class="container">
+	<button class="btn btn-primary">Bootstrap</button>
+</div>
 </body>
 </html>
+
+
+
+
+
+
