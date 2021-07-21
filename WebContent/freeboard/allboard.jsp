@@ -65,6 +65,7 @@ border-radius: 3px;
 }
 #menu {
 	text-align: center;
+	background: #FF5733;
 }
 #menu_no {
   text-align: center;
@@ -101,7 +102,7 @@ border-radius: 3px;
   text-align: center;
 }
 thead {
-	background: #f8f8f8;
+	background: #FF5733;
 }
 #lock {
 	background-color:hsl(80,10%,60%);
