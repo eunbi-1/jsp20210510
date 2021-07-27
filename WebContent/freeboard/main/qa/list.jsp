@@ -148,7 +148,6 @@ thead {
 </style>
 </head>
 <body>
-
 <div class="container">
 	<section id ="container">
 		<div class="container-sm">
@@ -161,6 +160,7 @@ thead {
 				         <th id="menu_category">종류</th>
 				         <th id="menu_title">제목</th>
 				         <th id="menu_nickname"><i class="far fa-user"></i></th>
+				         <th id="menu_readcnt"><i class="fas fa-eye"></i></th>
 				         <th id="menu_status">답변 상태</th>
 				       </tr>
 				    </thead>
@@ -277,8 +277,9 @@ thead {
 	      		<select name="type" id="inlineFormCustomSelectPref">      
 					<option value="T" ${pageMaker.cri.type eq 'T' ? 'selected' : ''}>제목</option>
 					<option value="C" ${pageMaker.cri.type eq 'C' ? 'selected' : ''}>내용</option>
-					<option value="S" ${pageMaker.cri.type eq 'S' ? 'selected' : ''}>종류</option>
+					<option value="S" ${pageMaker.cri.type eq 'S' ? 'selected' : ''}>분류</option>
 					<option value="W" ${pageMaker.cri.type eq 'W' ? 'selected' : ''}>닉네임</option>
+					<option value="TC" ${pageMaker.cri.type eq 'TC' ? 'selected' : ''}>제목,분류</option>
 					<option value="TWC" ${pageMaker.cri.type eq 'TCSW' ? 'selected' : ''}>전체 검색</option>
 				</select>
 				
@@ -371,6 +372,5 @@ thead {
 			</div>		
 		</div>
 	</div>
-
 </body>
 </html>

@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,15 +66,13 @@ border-radius: 3px;
 	border-bottom: 1px solid #E3E1E1;
 }
 #menu {
-	text-align: center;
-	background: #FF5733;
+  text-align: center;
 }
 #menu_no {
   text-align: center;
 }
 #menu_category {
   text-align: center;
-  
 }
 #menu_title {
   text-align: center;
@@ -81,6 +81,9 @@ border-radius: 3px;
   text-align: center;
 }
 #menu_regdate {
+  text-align: center;
+}
+#menu_readcnt {
   text-align: center;
 }
 #menu_status {
@@ -103,12 +106,6 @@ border-radius: 3px;
 }
 thead {
 	background: #f8f8f8;
-	padding: 10px; 
-	font-weight: bold; 
-	border-top: 1px solid #ccc; 
-	border-right: 1px solid #ccc; 
-	border-bottom: 2px solid #c00; 
-	background: #dcdcd1;
 }
 #lock {
 	background-color:hsl(80,10%,60%);
@@ -151,9 +148,6 @@ thead {
 </style>
 </head>
 <body>
-<!-- 
-<u:mainNav/>
- -->
 <div class="container">
 	<section id ="container">
 		<div class="container-sm">
@@ -166,6 +160,7 @@ thead {
 				         <th id="menu_category">종류</th>
 				         <th id="menu_title">제목</th>
 				         <th id="menu_nickname"><i class="far fa-user"></i></th>
+				         <th id="menu_readcnt"><i class="fas fa-eye"></i></th>
 				         <th id="menu_status">답변 상태</th>
 				       </tr>
 				    </thead>
@@ -281,9 +276,10 @@ thead {
 			<form action="${root }/qa/list" id="searchForm" class="form-inline my-0">			
 	      		<select name="type" id="inlineFormCustomSelectPref">      
 					<option value="T" ${pageMaker.cri.type eq 'T' ? 'selected' : ''}>제목</option>
-					<option value="S" ${pageMaker.cri.type eq 'S' ? 'selected' : ''}>종류</option>
 					<option value="C" ${pageMaker.cri.type eq 'C' ? 'selected' : ''}>내용</option>
+					<option value="S" ${pageMaker.cri.type eq 'S' ? 'selected' : ''}>분류</option>
 					<option value="W" ${pageMaker.cri.type eq 'W' ? 'selected' : ''}>닉네임</option>
+					<option value="TC" ${pageMaker.cri.type eq 'TC' ? 'selected' : ''}>제목,분류</option>
 					<option value="TWC" ${pageMaker.cri.type eq 'TCSW' ? 'selected' : ''}>전체 검색</option>
 				</select>
 				
@@ -376,8 +372,5 @@ thead {
 			</div>		
 		</div>
 	</div>
-	<!--  
-<u:footer/>
-	-->
 </body>
 </html>
